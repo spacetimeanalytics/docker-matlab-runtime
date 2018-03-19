@@ -7,5 +7,5 @@ RUN mkdir /tmp/mcr_installer && \
     unzip MCR_R2016b_glnxa64_installer.zip && \
     ./install -mode silent -agreeToLicense yes && \
     rm -Rf /tmp/mcr_installer
-ENV MCRROOT=/usr/local/MATLAB/MATLAB_Runtime/v91 MCR_CACHE_VERBOSE=true MCR_CACHE_ROOT=/tmp
+ENV MCRROOT=/usr/local/MATLAB/MATLAB_Runtime/v91 MCR_CACHE_ROOT=/tmp
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$MCRROOT/runtime/glnxa64:$MCRROOT/bin/glnxa64:$MCRROOT/sys/os/glnxa64:$MCRROOT/sys/opengl/lib/glnxa64:$MCRROOT/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:$MCRROOT/sys/java/jre/glnxa64/jre/lib/amd64/server:$MCRROOT/sys/java/jre/glnxa64/jre/lib/amd64
